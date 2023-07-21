@@ -1,0 +1,11 @@
+# Ignore build artifacts
+build/
+dist/
+*.log
+
+# Ignore temporary files
+.DS_Store
+Thumbs.db
+
+# Ignore sensitive data (modify this as needed)
+credentials.json
