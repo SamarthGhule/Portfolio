@@ -3,39 +3,43 @@
 <!-- The lang attribute specifies the language of the document, in this case, English. -->
 <html lang="en">
 
-<!-- The <head> section of an HTML document typically contains metadata, external resource links (stylesheets, scripts), and other configuration settings that affect the rendering and behavior of the webpage.     -->
+<!-- The <head> section of an HTML document typically contains metadata, external resource links (stylesheets, scripts), and other configuration settings that 
+     affect the rendering and behavior of the webpage. -->
 <head>
-<!--     This line is used to preconnect to the domain https://fonts.googleapis.com, which can help improve page loading speed by starting a connection to the domain before it's actually needed. -->
+<!--This line is used to preconnect to the domain https://fonts.googleapis.com, which can help improve page loading speed by starting 
+    a connection to the domain before it's actually needed. -->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<!--     Similar to the previous line, this preconnects to the domain https://fonts.gstatic.com with the crossorigin attribute to specify that cross-origin requests should be made. -->
+<!--Similar to the previous line, this preconnects to the domain https://fonts.gstatic.com with the crossorigin attribute to specify that cross-origin requests 
+    should be made. -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--     This meta tag specifies the character encoding for the document as UTF-8, which supports a wide range of characters and languages. -->
+<!--This meta tag specifies the character encoding for the document as UTF-8, which supports a wide range of characters and languages. -->
     <meta charset="UTF-8">
-<!--     This meta tag specifies the compatibility mode for Internet Explorer. The IE=edge value indicates that the latest version of IE should be used. -->
+<!--This meta tag specifies the compatibility mode for Internet Explorer. The IE=edge value indicates that the latest version of IE should be used. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!--     This meta tag defines the viewport settings for responsive design. It sets the width to the device width and initial-scale to 1.0, which means the page will scale to fit the device screen. -->
+<!--This meta tag defines the viewport settings for responsive design. It sets the width to the device width and initial-scale to 1.0, 
+    which means the page will scale to fit the device screen. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Responsive Personal Portfolio Website using HTML CSS Javascript | Samarth Ghule</title>
 
-<!--     This line links an external CSS file named "style.css" to apply styling to the HTML content. -->
+<!--This line links an external CSS file named "style.css" to apply styling to the HTML content. -->
     <link rel="stylesheet" href="style.css">
-<!--     This line specifies the favicon for the website, which is the small icon that appears in the browser tab. -->
+<!--This line specifies the favicon for the website, which is the small icon that appears in the browser tab. -->
     <link rel="icon" type="image/x-icon" href="images/favicon_io (1)/android-chrome-512x512.png">
     <!-- box icons -->
-<!--     This line links an external CSS file that provides "box icons" styles to the HTML content. -->
+<!--This line links an external CSS file that provides "box icons" styles to the HTML content. -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
     
 
 <body>
     <!-- header design -->
-<!--      The header section typically contains the main content at the top of a web page. -->
+<!-- The header section typically contains the main content at the top of a web page.-->
     <header class="header">
-<!--         The href="#" attribute indicates that clicking the link doesn't navigate anywhere. -->
+<!-- The href="#" attribute indicates that clicking the link doesn't navigate anywhere. -->
         <a href="#" class="logo">Samarth_Ghule<span class="animate" style="--i:1;"></span></a>
 
         <div class="bx bx-menu" id="menu-icon"><span class="animate" style="--i:2;"></span></div>
-<!-- he <nav> provides navigation links, either within the current document or to other documents.  eg. menu, content. -->
+<!-- The <nav> provides navigation links, either within the current document or to other documents.  eg. menu, content. -->
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -45,19 +49,21 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
 
-<!--     <span> element has the class "active-nav". It's likely used to highlight the active navigation link with a visual effect. -->
+<!-- <span> element has the class "active-nav". It's likely used to highlight the active navigation link with a visual effect. -->
             <span class="active-nav"></span>
-<!--     This <span> element has the class "animate" and a custom CSS variable --i:2; set using the style attribute. It's likely used for animation effects or styling. -->
+<!-- This <span> element has the class "animate" and a custom CSS variable --i:2; set using the style attribute. 
+     It's likely used for animation effects or styling. -->
             <span class="animate" style="--i:2;"></span>
         </nav>
     </header>
 
 <!-- home section design -->
-<!--     Section tag defines the section of documents such as chapters, headers, footers or any other sections. The section tag divides the content into section and subsections. -->
+<!-- Section tag defines the section of documents such as chapters, headers, footers or any other sections. 
+     The section tag divides the content into section and subsections. -->
 <section class="home show-animate" id="home">
     <div class="home-content">
         <h1>Hi, I'm <span>Samarth!</span><span class="animate" style="--i:2;"></span></h1>
-<!--         br inserts a line break -->
+<!-- br inserts a line break -->
         <br>
         <br>
         <br>
@@ -68,7 +74,13 @@
         <p>
            <span class="animate" style="--i:4;"></span>
         </p>    
-        
+
+
+<!-- This line creates an anchor (<a>) element that represents a button. It has the following attributes:
+      href="images/Samarth's Resume (20).pdf": This attribute specifies the URL or file path to the PDF file named "Samarth's Resume (20).pdf". 
+                                               Clicking this link will open or download the PDF file.
+      class="btn": This attribute sets the class "btn" to style the anchor element as a button.
+      download   : This attribute indicates that the linked file should be downloaded when clicked. -->
         <div class="btn-box">
             <a href="images/Samarth's Resume (20).pdf" class="btn" download>Grab Resume</a>
             <a href="#" class="btn" onclick="location.href='https://wa.me/+919522770214'" target="_blank">Let's Talk</a>
