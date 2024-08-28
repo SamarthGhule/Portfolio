@@ -22,6 +22,34 @@
     --main-color: #00abf0;
 }
 
+.container {
+            display: flex;
+            margin: 50px;
+            column-gap: 20px;
+        }
+        
+        .scrollbar {
+            height: 300px;
+            width: 50%;
+            overflow: auto;
+            padding: 0 10px;
+        }
+
+#scrollbar6::-webkit-scrollbar {
+            width: 12px;
+        }
+        
+        #scrollbar6::-webkit-scrollbar-track {
+            border-radius: 8px;
+            background-color: #95a5a6;
+            border: 1px solid #cacaca;
+        }
+        
+        #scrollbar6::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: #2c3e50;
+        }
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
