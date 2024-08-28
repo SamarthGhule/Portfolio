@@ -27,7 +27,7 @@
 
 
 
-/* .container {
+.container {
             display: flex;
             margin: 50px;
             column-gap: 20px;
@@ -53,7 +53,7 @@
         #scrollbar6::-webkit-scrollbar-thumb {
             border-radius: 8px;
             background-color: #2c3e50;
-        } */
+        }
 
 
 
