@@ -7,7 +7,7 @@ let menuIcon = document.querySelector('#menu-icon');
 // This line selects an HTML element with the class "navbar" using the document.querySelector method. 
 // Similarly, it's assumed that there's an HTML element with the class "navbar" somewhere in the document. 
 // The selected element is stored in the variable navbar.
-let navbar   = document.querySelector('.navbar');
+let navbar = document.querySelector('.navbar');
 
 
 // This part of the code assigns an event handler to the onclick event of the menuIcon element. 
@@ -25,7 +25,7 @@ let navbar   = document.querySelector('.navbar');
 // In essence, when the menuIcon element is clicked, this event handler toggles the appearance of the menu icon (by adding or removing the "bx-x" class) and 
 // also toggles the visibility of the navigation bar (by adding or removing the "active" class). 
 // This is a common technique used for creating interactive menus where clicking an icon opens or closes a navigation menu.
-    
+
 menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
@@ -76,26 +76,26 @@ let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
-       let top = window.scrollY;
-       let offset = sec.offsetTop - 100;
-       let height = sec.offsetHeight;
-       let id = sec.getAttribute('id');
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 100;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
-       if(top >= offset && top < offset + height){
-        //active navbar links
-        navLinks.forEach(links => {
-            links.classList.remove('active');
-            document.querySelector('header nav a[href*=' +id + ']').classList.add('active');
-        });
-        //active sections for animation on scroll
-        sec.classList.add('show-animate');
-       }
-       //If you want to use animation that repeats on scroll, then try this
-       else{
-        sec.classList.remove('show-animate');
-       }
+        if (top >= offset && top < offset + height) {
+            //active navbar links
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+            //active sections for animation on scroll
+            sec.classList.add('show-animate');
+        }
+        //If you want to use animation that repeats on scroll, then try this
+        else {
+            sec.classList.remove('show-animate');
+        }
     });
-  
+
     //sticky header
 
     // This line selects the first HTML element with the tag name <header> in the document using the document.querySelector method. 
@@ -116,10 +116,10 @@ window.onscroll = () => {
 
     // In the context of a website, applying the "sticky" class to the header likely involves CSS styles that keep the header fixed at the top of the viewport 
     // as the user scrolls down. 
-    
+
     // This creates a common effect where the navigation or header area remains visible even when other content is scrolled past, 
     // enhancing user experience and ease of navigation.
-    
+
     header.classList.toggle('sticky', window.scrollY > 100);
 
     //remove toggle icon and navbar when click navbar links (scroll)
@@ -128,26 +128,26 @@ window.onscroll = () => {
     // This line removes the class "bx-x" from the menuIcon element's class list. 
     // It's assumed that the menuIcon element is an HTML element that represents a toggle icon for a navigation menu. The "bx-x" class might be used to change 
     // the icon appearance, potentially from a menu icon (e.g., "bx-menu") to a close icon (e.g., "bx-x") when the menu is open.
-    
+
     menuIcon.classList.remove('bx-x');
-    
 
-   // This line removes the class "active" from the navbar element's class list. 
-   // The navbar element likely represents the navigation bar or menu container. 
-   // Adding the "active" class to this element might trigger CSS styles that display the navigation menu, and removing it would hide the menu when it's not in use.
 
-   // Combined, these two lines work together to ensure that when a navigation link within the menu is clicked, any special appearance (icon change) 
-   // or state (menu open) is reverted. This helps ensure that the visual and interactive states of the menu are consistent when a user interacts with it.
-    
+    // This line removes the class "active" from the navbar element's class list. 
+    // The navbar element likely represents the navigation bar or menu container. 
+    // Adding the "active" class to this element might trigger CSS styles that display the navigation menu, and removing it would hide the menu when it's not in use.
+
+    // Combined, these two lines work together to ensure that when a navigation link within the menu is clicked, any special appearance (icon change) 
+    // or state (menu open) is reverted. This helps ensure that the visual and interactive states of the menu are consistent when a user interacts with it.
+
     navbar.classList.remove('active');
 
-    
-    
+
+
     //animation footer on scroll
 
     // This line selects the first HTML element with the tag name <footer> in the document using the document.querySelector method. 
     // It retrieves the footer element and stores it in the variable footer.
-    
+
     let footer = document.querySelector('footer');
 
 
@@ -179,13 +179,13 @@ window.onscroll = () => {
 // This line declares a constant variable scriptURL and assigns it a string value. 
 // This URL points to a Google Apps Script endpoint, which is likely used to handle form submissions.
 
-const scriptURL = 
-  'https://script.google.com/macros/s/AKfycbxwwJC5OGeU9kxX6DIXwe5E9OrcoCBp-fjUTtHQmaUpVGJnFfllxxWQn6xBubk4qy4h/exec'
+const scriptURL =
+    'https://script.google.com/macros/s/AKfycbxwwJC5OGeU9kxX6DIXwe5E9OrcoCBp-fjUTtHQmaUpVGJnFfllxxWQn6xBubk4qy4h/exec'
 
 // This line selects a <form> element with the name attribute set to "submit-to-google-sheet" using the document.forms property. 
 // The selected form element is stored in the constant variable form.
 
-const form = document.forms["submit-to-google-sheet"] 
+const form = document.forms["submit-to-google-sheet"]
 // const msg = document.getElementById("msg"); 
 
 
@@ -212,9 +212,12 @@ const form = document.forms["submit-to-google-sheet"]
 // When the form is submitted, it prevents the default behavior, sends the form data to the specified Google Apps Script URL, and provides feedback to the user through
 // an alert.
 
-form.addEventListener("submit", e => { 
-  e.preventDefault()
-  fetch(scriptURL, { method: "POST", body: new FormData(form) }) 
-    .then( response => alert("Thanks for contacting us..! We will contact you soon...")) 
-    .catch( error => console.error('Error!' , error.message)) 
+form.addEventListener("submit", e => {
+    e.preventDefault()
+    fetch(scriptURL, {
+            method: "POST",
+            body: new FormData(form)
+        })
+        .then(response => alert("Thanks for contacting us..! We will contact you soon..."))
+        .catch(error => console.error('Error!', error.message))
 })
